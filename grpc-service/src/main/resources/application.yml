@@ -1,0 +1,11 @@
+grpc:
+  server:
+    port: 9000
+#    security:
+#      enabled: true
+#      certificate-chain: classpath:certificates/server.crt
+#      private-key: classpath:certificates/server.key
+
+#  grpc.server.security.enabled=true
+#  grpc.server.security.certificateChain=classpath:certificates/server.crt
+#  grpc.server.security.privateKey=classpath:certificates/server.key

@@ -1,0 +1,13 @@
+grpc:
+  client:
+    grpc-greeting-service:
+      address: static://localhost:9000
+      negotiationType: plainText
+    grpc-random-service:
+      address: static://localhost:9000
+      negotiationType: plainText
+
+server:
+  port: 8081
+
+

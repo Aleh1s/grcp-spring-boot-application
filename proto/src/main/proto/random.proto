@@ -1,0 +1,26 @@
+syntax = "proto3";
+package com.example.random;
+
+option java_multiple_files = true;
+option java_package = "com.example.random";
+
+service RandomService {
+
+  rpc getRandom(RandomRequest) returns (RandomResponse) {
+  }
+
+}
+
+message RandomRequest {
+
+  string name = 1;
+
+}
+
+message RandomResponse {
+
+  string name = 1;
+  int32 randomNumber = 2;
+
+}
+
