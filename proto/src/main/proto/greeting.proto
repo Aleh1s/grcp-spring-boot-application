@@ -9,6 +9,9 @@ service GreetingService {
   rpc greeting(GreetingRequest) returns (GreetingResponse) {
   }
 
+  rpc getAsyncGreeting(GreetingRequest) returns(stream Greeting) {
+  }
+
 }
 
 message GreetingRequest {
@@ -21,6 +24,13 @@ message GreetingRequest {
 message GreetingResponse {
 
   string message = 1;
+
+}
+
+message Greeting {
+
+  string name = 1;
+  string message = 2;
 
 }
 

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/messages")
 public class GreetingController {
@@ -23,4 +25,10 @@ public class GreetingController {
                              @PathVariable String message) {
         return messageClientService.getMessage(name, message);
     }
+
+    @GetMapping("/get-names/{name}")
+    public List<Object> getNames(@PathVariable String name) throws InterruptedException {
+        return messageClientService.getNames(name);
+    }
+
 }
